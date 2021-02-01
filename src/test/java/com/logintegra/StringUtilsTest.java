@@ -34,4 +34,12 @@ class StringUtilsTest {
         String s = stringUtils.getFirstLetter(null);
         assertEquals(s, "");
     }
+
+    @Test
+    void getLastLetter() {
+        assertAll("words",
+                () -> assertEquals(stringUtils.getLastLetter("Java"),"a"),
+                () -> assertEquals(stringUtils.getLastLetter(null), ""),
+                () -> assertEquals(stringUtils.getLastLetter(""), ""));
+    }
 }
